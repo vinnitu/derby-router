@@ -326,7 +326,7 @@ we can write:
 ```js
 app.module('friends', {
   load: ['user', function(user){
-    var friends = this.model.query('users', user.user.path('friendIds'));
+    var friends = this.model.query('users', user.path('friendIds'));
     this.addSubscriptions(friends);
   }]
   // We don't need setup-function here
